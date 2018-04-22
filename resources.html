@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <meta charset="UTF-8">
+   <title>OPUS</title>
+
+   <style>
+       *{
+           margin:0;
+           padding:0;
+       }
+       body {
+           font-family: Helvetica, Arial, sans-serif;
+           font-size:16px;
+           background-color: ;
+           position: relative;
+           margin: 0;
+           padding-bottom: 6rem;
+           min-height: 100%;
+       }
+       h1, h2, h3, p {
+           text-align: center;
+           color: rgb(12,71,112);
+       }
+       .body-text {
+           color: rgb(12,71,112);
+           padding-left: 45px;
+           padding-right: 45px;
+       }
+       .mobile-menu {
+           display:block;
+           width:100%;
+           background: rgb(12,71,112)/*e0b88f/*c99393/*e5d1a4/*dcc591/*EFD3A3*/;
+           line-height: 1.6em;
+           font-weight: 400;
+           width:100%;
+           text-align:center;
+           position: relative;
+           margin:0 auto;
+       }
+       /*Strip the ul of padding and list styling*/
+       .mobile-menu ul {
+           list-style-type:none;
+           margin: 0 auto;
+           padding-left:0;
+           text-align:center;
+           width:100%;
+           position: absolute;
+           background: rgb(12,71,112);
+       }
+
+       /*Create a horizontal list with spacing*/
+       .mobile-menu li {
+           display:inline-block;
+           /*float: left;
+           margin-right: 1px;*/
+       }
+
+       /*Style for menu links*/
+       .mobile-menu li a {
+           display:block;
+           min-width:140px;
+           text-align: center;
+           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+           color: #fff;
+           text-transform:uppercase;
+           background: rgb(12,71,112);
+           text-decoration: none;
+           margin-left:-5px;
+           padding: 10px 0;
+           -webkit-transition: all 0.4s ease 0s;
+           -moz-transition: all 0.4s ease 0s;
+           -ms-transition: all 0.4s ease 0s;
+           -o-transition: all 0.4s ease 0s;
+           transition: all 0.4s ease 0s;
+       }
+
+       /*Hover state for top level links*/
+       .mobile-menu li:hover a {
+           color: #4db3ff;
+           background-color:#ccddee;
+       }
+
+       /*Style for dropdown links*/
+       .mobile-menu li:hover ul a {
+           background: #f3f3f3;
+           color: #2f3036;
+           height: 40px;
+           line-height: 40px;
+       }
+
+       /*Hover state for dropdown links*/
+       .mobile-menu li:hover .mobile-menu ul a:hover {
+           color: #4db3ff;
+       }
+
+       /*Hide dropdown links until they are needed*/
+       .mobile-menu li ul {
+           display: none;
+       }
+
+       /*Make dropdown links vertical*/
+       .mobile-menu li ul li {
+           display: block;
+           float: none;
+       }
+
+       /*Prevent text wrapping*/
+       .mobile-menu li ul li a {
+           width: auto;
+           min-width: 100px;
+           padding: 0 20px;
+       }
+
+
+       /*Style 'show menu' label button and hide it by default*/
+       .mobile-menu .show-menu {
+           text-decoration: none;
+           color: #fff;
+           background: rgb(12,71,112);
+           text-align: center;
+           padding: 10px 15px;
+           display: none;
+           cursor: pointer;
+           text-transform: uppercase;
+       }
+
+       .mobile-menu .show-menu span{
+           padding-left: 35px;
+           font-size: 32px;
+       }
+
+       /*Hide checkbox*/
+       .mobile-menu input[type=checkbox]{
+           display: none;
+       }
+
+       /*Show menu when invisible checkbox is checked*/
+       .mobile-menu input[type=checkbox]:checked ~ #menu{
+           display: block;
+       }
+
+       /*Responsive Styles*/
+
+       @media screen and (max-width : 1000px){
+           .mobile-menu .lines {
+               border-bottom: 15px double #f8f8f8;
+               border-top: 5px solid #f8f8f8;
+               content:"";
+               height: 5px;
+               width:20px;
+               padding-right:15px;
+               float: right;
+           }
+           /*Make dropdown links appear inline*/
+           .mobile-menu ul {
+               position: static;
+               display: none;
+           }
+           /*Create vertical spacing*/
+           .mobile-menu li {
+               margin-bottom: 1px;
+           }
+           /*Make all menu links full width*/
+           .mobile-menu ul li, .mobile-menu li a {
+               width: 100%;
+           }
+           /*Display 'show menu' link*/
+           .mobile-menu .show-menu {
+               display:block;
+           }
+       }
+       .footer {
+           background-color: rgb(12,71,112);
+           color: #fff;
+           font-size: 30px;
+           height: auto;
+           margin-bottom: 0px;
+           position:fixed;
+           right: 0;
+           bottom: 0;
+           left: 0;
+       }
+       .footer-head {
+           color: #fff;
+       }
+       .footer-p {
+           font-size: 10px;
+           color: #fff;
+       }
+       .resources {
+           margin: auto;
+           align-content: center;
+       }
+
+   </style>
+   <script>
+       
+   </script>
+</head>
+<body>
+<nav class="mobile-menu">
+   <label for="show-menu" class="show-menu"><span>OPUS</span><div class="lines"></div></label>
+   <input type="checkbox" id="show-menu">
+   <ul id="menu">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="my-meds.html">My Meds</a></li>
+       <li><a href="add-med.html">Add Meds</a></li>
+       <li><a href="track.html">Med Tracking</a></li>
+       <li><a href="resources.html">Resources</a></li>
+   </ul>
+</nav>
+
+    <br>
+    
+    <h1>Resources</h1>
+    
+    <br>
+    
+    <table class="resources">
+        <tr>
+            <td>
+                <a href=""><img src="other/addiction.jpeg"></a>
+            </td>
+            <td>
+                <a href=""><img src="other/interactions.jpeg"></a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <a href=""><img src="other/pdmp.png"></a>
+            </td>
+            <td>
+                <a href=""><img src="other/Rx.jpeg"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href=""><img src="other/emergency.jpeg"></a>
+            </td>
+            <td>
+                <a href=""><img src="other/support.jpeg"></a>
+            </td>
+        </tr>
+    
+    </table>
+    
+    <div class="footer">
+        <p class="footer-head">OPUS</p>
+        <p class="footer-p">A Project by Team 3<br><br></p>
+    </div>
+    
+</body>
+</html>
+
+
